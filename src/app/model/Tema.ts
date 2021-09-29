@@ -1,7 +1,8 @@
 import { Postagem } from "./Postagem";
 
 export class Tema{
-    public idTema: number;
-    public tema: string;
+    public id: number;
+    public descricao: string;
+    public qtd: number;
     public postagens: Postagem[];
 }
