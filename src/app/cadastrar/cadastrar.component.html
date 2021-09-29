@@ -7,38 +7,38 @@
                     <h1 class="text-center text-white">Cadastro</h1>
                     <form id="form_id" method="post" name="myform">
                         <div class='form-itemmmm'>
-                            <input class="inputText" type="text" name="Name" id="Name" onkeyup="" required />
+                            <input [(ngModel)]='user.nome' class="inputText" type="text" name="Name" id="Name" onkeyup="" required />
                             <span class="floating-label">Nome</span>
                             <div id="txtName"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input class="inputText" type="text" name="Email" id="Email" onkeyup="" required />
+                            <input [(ngModel)]='user.email' class="inputText" type="text" name="Email" id="Email" onkeyup="" required />
                             <span class="floating-label">Email</span>
                             <div id="txtEmail"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input class="inputText" type="text" name="Foto" id="Foto" onkeyup="" required />
+                            <input [(ngModel)]='user.usuario' class="inputText" type="text" name="Usuario" id="Usuario" onkeyup="" required />
+                            <span class="floating-label">Usuario</span>
+                            <div id="txtUsuario"></div>
+                        </div>
+                        <div class='form-itemmmm'>
+                            <input [(ngModel)]='user.foto' class="inputText" type="text" name="Foto" id="Foto" onkeyup="" required />
                             <span class="floating-label">Link da Foto</span>
                             <div id="txtFoto"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input class="inputText" type="text" name="Biografia" id="Biografia" onkeyup="" required />
-                            <span class="floating-label">Biografia</span>
-                            <div id="txtBiografia"></div>
-                        </div>
-                        <div class='form-itemmmm'>
-                            <input type="password" class="inputText" name="Pass" id="Pass" onkeyup="" required />
+                            <input (input)='confirmSenha($event)' type="password" class="inputText" name="Pass" id="Pass" onkeyup="" required />
                             <span class="floating-label">Senha</span>
                             <div id="txtPass"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input type="password" class="inputText" name="Conpass" id="Conpass" onkeyup="" required />
+                            <input [(ngModel)]='user.senha' type="password" class="inputText" name="Conpass" id="Conpass" onkeyup="" required />
                             <span class="floating-label">Confirmar Senha</span>
                             <div id="txtConPass"></div>
                         </div>
                         <div class='form-itemmmm'>
                             <label for="tipo">Tipo de Usuário</label>
-                            <select class="form-control inputText" name="tipo" id="tipo">
+                            <select class="form-control inputText" name="tipo" id="tipo" (change)='tipUser($event)'>
                                 <option>Selecione um tipo de usuário: </option>
                                 <option value="normal">Normal</option>
                                 <option value="adm">Administrador</option>
@@ -49,8 +49,8 @@
                             <button type="submit" class="btn btn-primary style-button2 shadow-none mr-4" onclick="">
                                 <a class="link-ab" routerLink='/login'>Cancelar</a>
                             </button>
-                            <button type="submit" class="btn btn-primary style-button shadow-none" onclick="">
-                                <a class="link-ab" href="">Cadastrar</a>
+                            <button type="submit" class="btn btn-primary style-button shadow-none" (click)='cadastrar()'>
+                                <a class="link-ab">Cadastrar</a>
                             </button>
                         </div>
                     </form>
