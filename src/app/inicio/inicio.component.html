@@ -1,1 +1,98 @@
-<p>inicio works!</p>
+<div class="container-fluid">
+    <div class="row bg-secondary d-flex align-items-center">
+        <div class="col-md-6">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 text-white">
+                    <h1 class="fs-54">Seja bem vindo(a)!</h1>
+                    <h5 class="fs-18">expresse aqui os seus pensamentos e opniões!</h5>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+                <div class="col-md-6">
+                    <button class="btn btn-outline-light mr-2" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                    <a href="#postagens" class="btn btn-outline-light">Ver Postagens</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="https://i.imgur.com/hEk28Al.png" alt="" width="500px" height="500px">
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 mt-5" id="postagens">
+    <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active text-dark font-weight-bold" id="pills-todasPostagens-tab" data-toggle="pill"
+                href="#pills-todasPostagens" role="tab" aria-controls="pills-todasPostagens" aria-selected="true">Todas
+                as Postagens</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-dark font-weight-bold" id="pills-minhasPostagens-tab" data-toggle="pill"
+                href="#pills-minhasPostagens" role="tab" aria-controls="pills-minhasPostagens"
+                aria-selected="false">Minhas Postagens</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-dark font-weight-bold" id="pills-postagemTema-tab" data-toggle="pill"
+                href="#pills-postagemTema" role="tab" aria-controls="pills-postagemTema" aria-selected="false">Postagens
+                por tema</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-todasPostagens" role="tabpanel"
+            aria-labelledby="pills-todasPostagens-tab">
+            Todas as Postagens
+        </div>
+
+        <div class="tab-pane fade" id="pills-minhasPostagens" role="tabpanel"
+            aria-labelledby="pills-minhasPostagens-tab">
+            Minhas Postagens
+        </div>
+
+        <div class="tab-pane fade" id="pills-postagemTema" role="tabpanel" aria-labelledby="pills-postagemTema-tab">
+            Postagens por tema
+        </div>
+    </div>
+</div>
+<br><br>
+
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Nova Postagem</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+                </div>
+                <div class="form-group">
+                    <label for="texto">Texto</label>
+                    <textarea class="form-control" name="texto" id="texto" rows="3" placeholder="Digite no que esta pensando"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="texto">Escolha um tema ou <a href="">cadastre um novo</a>:</label>
+                    <select class="form-control" name="tema" id="tema">
+                        <option value="">Temas</option>
+                        <option value="">Java</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Publicar</button>
+            </div>
+        </div>
+    </div>
+</div>

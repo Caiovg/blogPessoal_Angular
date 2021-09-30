@@ -39,6 +39,8 @@ export class LoginComponent implements OnInit {
     }, erro =>{
       if(erro.status == 404){
         alert("Usuario ou senha invalidos!")
+      }else{
+        console.log(erro.menssage)
       }
     })
   }
