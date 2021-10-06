@@ -36,6 +36,12 @@ export class LoginComponent implements OnInit {
       console.log(environment.id)
 
       this.router.navigate(['/inicio'])
+      //Acesso de usuario e de adm projeto integraor
+      /*if(this.userLogin.tipo == "adm"){
+        this.router.navigate(['/inicio'])
+      }else{
+        this.router.navigate(['/cadastro'])
+      }*/
     }, erro =>{
       if(erro.status == 404){
         alert("Usuario ou senha invalidos!")
