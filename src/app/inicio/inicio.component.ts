@@ -24,6 +24,9 @@ export class InicioComponent implements OnInit {
   idTema: number
   listaTemas: Tema[]
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
