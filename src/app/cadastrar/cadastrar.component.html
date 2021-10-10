@@ -33,7 +33,7 @@
                         </div>
                         <div class='form-itemmmm'>
                             <label for="tipo">Tipo de Usuário</label>
-                            <select class="form-control inputText" name="tipo" id="tipo" (change)='tipUser($event)'>
+                            <select class="form-control inputText" name="tipo" id="tipo" (change)='tipoUser($event)'>
                                 <option>Selecione um tipo de usuário: </option>
                                 <option value="normal">Normal</option>
                                 <option value="adm">Administrador</option>
@@ -41,10 +41,10 @@
                             <div id="txtConPass"></div>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary style-button2 shadow-none mr-4" onclick="">
+                            <button class="btn btn-primary style-button2 shadow-none mr-4">
                                 <a class="link-ab" routerLink='/login'>Cancelar</a>
                             </button>
-                            <button type="submit" class="btn btn-primary style-button shadow-none" (click)='cadastrar()'>
+                            <button class="btn btn-primary style-button shadow-none" (click)='cadastrar()'>
                                 <a class="link-ab">Cadastrar</a>
                             </button>
                         </div>
