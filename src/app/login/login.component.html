@@ -1,22 +1,26 @@
 <section>
     <div class="container">
         <div class="row login-page">
-            <div class="col-lg-6 dashboard"></div>
+            <div class="d-none d-md-block">
+                <div class="col-lg-6 dashboard"></div>
+            </div>
             <div class="col-lg-6 form-login bg-dark">
                 <div class="position-login">
                     <form id="form_id" method="post" name="myform">
                         <div class='form-itemmmm'>
-                            <input [(ngModel)]='userLogin.usuario' type="text" class="inputText" type="text" name="userName" id="userName" required />
+                            <input [(ngModel)]='userLogin.usuario' type="text" class="inputText" type="text"
+                                name="userName" id="userName" required />
                             <span class="floating-label">User Name</span>
                             <div id="txtUserName"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input [(ngModel)]='userLogin.senha' type="password" class="inputText" name="pass" id="pass" required />
+                            <input [(ngModel)]='userLogin.senha' type="password" class="inputText" name="pass" id="pass"
+                                required />
                             <span class="floating-label">Password</span>
                             <div id="txtPass"></div>
                         </div>
-                        <button type="submit" class="btn btn-primary style-button shadow-none"
-                            (click)='entrar()'><a class="link-ab" href=""> Login</a></button>
+                        <button type="submit" class="btn btn-primary style-button shadow-none" (click)='entrar()'><a
+                                class="link-ab" href=""> Login</a></button>
                     </form>
                     <div class="links-form">
                         <a href="#">Esqueceu sua senha?</a>

@@ -1,33 +1,40 @@
 <section>
     <div class="container">
         <div class="row login-page">
-            <div class="col-lg-6 dashboard"></div>
+            <div class="d-none d-md-block">
+                <div class="col-lg-6 dashboard"></div>
+            </div>
             <div class="col-lg-6 form-login bg-dark">
                 <div class="position-login">
                     <h1 class="text-center text-white">Cadastro</h1>
                     <form id="form_id" method="post" name="myform">
                         <div class='form-itemmmm'>
-                            <input [(ngModel)]='user.nome' class="inputText" type="text" name="Name" id="Name" onkeyup="" required />
+                            <input [(ngModel)]='user.nome' class="inputText" type="text" name="Name" id="Name"
+                                onkeyup="" required />
                             <span class="floating-label">Nome</span>
                             <div id="txtName"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input [(ngModel)]='user.usuario' class="inputText" type="text" name="Email" id="Email" onkeyup="" required />
+                            <input [(ngModel)]='user.usuario' class="inputText" type="text" name="Email" id="Email"
+                                onkeyup="" required />
                             <span class="floating-label">Email</span>
                             <div id="txtEmail"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input [(ngModel)]='user.foto' class="inputText" type="text" name="Foto" id="Foto" onkeyup="" required />
+                            <input [(ngModel)]='user.foto' class="inputText" type="text" name="Foto" id="Foto"
+                                onkeyup="" required />
                             <span class="floating-label">Link da Foto</span>
                             <div id="txtFoto"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input (input)='confirmSenha($event)' type="password" class="inputText" name="Pass" id="Pass" onkeyup="" required />
+                            <input (input)='confirmSenha($event)' type="password" class="inputText" name="Pass"
+                                id="Pass" onkeyup="" required />
                             <span class="floating-label">Senha</span>
                             <div id="txtPass"></div>
                         </div>
                         <div class='form-itemmmm'>
-                            <input [(ngModel)]='user.senha' type="password" class="inputText" name="Conpass" id="Conpass" onkeyup="" required />
+                            <input [(ngModel)]='user.senha' type="password" class="inputText" name="Conpass"
+                                id="Conpass" onkeyup="" required />
                             <span class="floating-label">Confirmar Senha</span>
                             <div id="txtConPass"></div>
                         </div>
@@ -44,7 +51,8 @@
                             <button type="submit" class="btn btn-primary style-button2 shadow-none mr-4" onclick="">
                                 <a class="link-ab" routerLink='/login'>Cancelar</a>
                             </button>
-                            <button type="submit" class="btn btn-primary style-button shadow-none" (click)='cadastrar()'>
+                            <button type="submit" class="btn btn-primary style-button shadow-none"
+                                (click)='cadastrar()'>
                                 <a class="link-ab">Cadastrar</a>
                             </button>
                         </div>
